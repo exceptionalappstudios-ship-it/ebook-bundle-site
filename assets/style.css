@@ -289,3 +289,29 @@ footer p{margin:10px 0 0}
 }
 @media (max-width:400px){.logo{font-size:14.5px;gap:8px}}
 @media (max-width:350px){.logo span.long{display:none}.cats{grid-template-columns:repeat(2,1fr)}}
+
+/* Discount: struck-through original price */
+.p-was{color:#F9A8D4;font-weight:700;text-decoration-thickness:2px}
+.pricebox .now .p-was{font-size:26px;margin-right:10px;vertical-align:middle;color:#C8C3E6}
+.buy .was-row{min-height:0;margin-top:4px}
+.buy .was-row .p-was{font-family:var(--display);font-size:28px;color:#C8C3E6}
+.save{display:inline-block;background:#22C55E;color:#fff;border-radius:99px;padding:3px 12px;font-size:13.5px;font-weight:800;vertical-align:middle;margin-left:6px}
+.save[hidden],.p-was[hidden]{display:none}
+.sticky .p-was{font-size:14px;color:#ABA5D0}
+
+/* Payment method badges */
+.paybadges{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.buy .paybadges{justify-content:center;margin-top:18px}
+.pb{display:inline-flex;align-items:center;gap:3px;height:30px;padding:0 11px;border-radius:8px;background:#fff;font:800 13px/1 var(--font);letter-spacing:-.01em;box-shadow:0 2px 6px rgba(0,0,0,.18);color:#222}
+.pb i{font-style:normal}
+.pb.upi{color:#097939;letter-spacing:.06em}
+.pb.upi:after{content:"";width:0;height:0;border-left:7px solid #F47920;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
+.pb.phonepe{background:#5F259F;color:#fff}
+.pb.gpay{color:#5F6368}.pb.gpay i{color:#4285F4;font-weight:800}
+.pb.paytm{color:#002E6E}.pb.paytm i{color:#00BAF2}
+.pb.visa{color:#1A1F71;font-style:italic;font-size:15px;letter-spacing:.02em}
+.pb.mc{color:#231F20;font-size:12px;gap:0}
+.pb.mc i{width:14px;height:14px;border-radius:50%;background:#EB001B;display:inline-block}
+.pb.mc i+i{background:#F79E1B;margin-left:-6px;margin-right:5px;mix-blend-mode:multiply}
+.pb.rupay{color:#097939;font-style:italic}.pb.rupay:first-letter{color:#1B3A6B}
+@media (max-width:760px){.paybadges{gap:6px}.pb{height:27px;padding:0 9px;font-size:12px}.pb.visa{font-size:13.5px}}
