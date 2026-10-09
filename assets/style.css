@@ -364,3 +364,7 @@ footer p{margin:10px 0 0}
   .tot b{font-size:30px}
   .fail b{font-size:16px}
 }
+
+/* Add-on note in buy box (chosen at checkout) */
+.upsell-in{display:flex;gap:14px;align-items:flex-start}
+.plusicon{flex:none;width:26px;height:26px;border-radius:8px;background:var(--yellow);color:#2A1300;display:grid;place-items:center;font-weight:800;margin-top:2px}
