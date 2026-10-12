@@ -407,3 +407,8 @@ footer p{margin:10px 0 0}
   .plan.pro{order:-1}
   .pprice b{font-size:40px}
 }
+
+/* Image logo */
+.logo.logo-img:before{display:none;content:none}
+.logo.logo-img img{display:block;height:54px;width:auto}
+@media (max-width:480px){.logo.logo-img img{height:46px}}
