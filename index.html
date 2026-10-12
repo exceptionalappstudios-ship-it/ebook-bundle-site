@@ -17,6 +17,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2120747508548541');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_ids: ['seekho-ebooks-60', 'seekho-complete-bundle'], content_type: 'product', content_name: 'SeekhoShop 60 ebooks with resell rights', value: 399, currency: 'INR'});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2120747508548541&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
@@ -154,10 +155,11 @@ function refresh(){
 document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[data-plan]'); if(!a||!window.fbq) return;
   var P=PLANS[a.dataset.plan];
-  fbq('track','InitiateCheckout',{value:D?P.d:P.p,currency:'INR',content_name:a.dataset.plan==='complete'?'SeekhoShop Complete Bundle':'SeekhoShop 60 Ebooks'});
+  var cid=a.dataset.plan==='complete'?'seekho-complete-bundle':'seekho-ebooks-60';
+  fbq('track','InitiateCheckout',{content_ids:[cid],content_type:'product',contents:[{id:cid,quantity:1}],num_items:1,value:D?P.d:P.p,currency:'INR',content_name:a.dataset.plan==='complete'?'SeekhoShop Complete Bundle':'SeekhoShop 60 Ebooks'});
 });
 (function(){var b=document.getElementById('buy');if(!b||!('IntersectionObserver' in window))return;
-  var io=new IntersectionObserver(function(es){if(es[0].isIntersecting&&window.fbq){fbq('track','ViewContent',{content_name:'SeekhoShop bundles',currency:'INR',value:599});io.disconnect();}},{threshold:.3});io.observe(b);})();
+  var io=new IntersectionObserver(function(es){if(es[0].isIntersecting&&window.fbq){fbq('trackCustom','ViewPricing',{content_name:'SeekhoShop bundles'});io.disconnect();}},{threshold:.3});io.observe(b);})();
 document.addEventListener('click',function(e){
   var a=e.target.closest('a.buy-btn'); if(!a) return;
   e.preventDefault(); document.getElementById('buy').scrollIntoView({behavior:'smooth'});
@@ -189,4 +191,4 @@ tabs.forEach(function(t){t.addEventListener('click',function(){show(t)})}); if(t
 var els=[document.querySelector('.hero .cta-row'),document.querySelector('#buy .buy')],vis=[false,false];
 var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[els.indexOf(e.target)]=e.isIntersecting});s.classList.toggle('hide',vis[0]||vis[1])});
 els.forEach(function(el){if(el)io.observe(el)});})();
-</script><footer><div class="wrap"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refund Policy</a><a href="contact.html">Contact</a><p>© 2026 SeekhoShop. Digital products. Delivered online; nothing is shipped.</p><p>This website is not affiliated with Meta, Facebook or Instagram.</p></div></footer></body></html>
+</script><footer><div class="wrap"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refund Policy</a><a href="contact.html">Contact</a><p>© 2026 SeekhoShop. Digital products. Delivered online; nothing is shipped.</p><p>This website is not affiliated with Meta, Facebook or Instagram.</p></div></footer><script src="assets/track.js?v=1"></script></body></html>
