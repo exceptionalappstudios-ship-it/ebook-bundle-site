@@ -376,3 +376,34 @@ footer p{margin:10px 0 0}
 .srcnote{font-size:12px;color:var(--mut);margin:16px 0 0}
 .lede b{color:#fff}
 @media (max-width:760px){.cstat > b{font-size:26px}}
+
+/* Two-plan pricing */
+.pricebox .from{font-family:var(--font);font-size:15px;font-weight:600;color:#C8C3E6;margin-right:8px;vertical-align:middle}
+.pricebox .now [data-was]{font-size:26px;margin-right:10px;vertical-align:middle;color:#C8C3E6;text-decoration-thickness:2px}
+.pricebox .meta b{color:#FDE68A}
+.plans{display:grid;grid-template-columns:1fr 1.15fr;gap:18px;margin:26px auto 4px;max-width:880px;text-align:left;align-items:stretch}
+.plan{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:26px 22px 22px;display:flex;flex-direction:column}
+.plan.pro{background:linear-gradient(#1E1640,#1E1640) padding-box,var(--grad) border-box;border:2px solid transparent;box-shadow:0 24px 50px -20px rgba(236,72,153,.6)}
+.rec{position:absolute;top:-14px;left:22px;background:var(--yellow);color:#2A1300;font-weight:800;font-size:12.5px;padding:5px 12px;border-radius:99px;box-shadow:0 6px 14px -4px rgba(250,204,21,.6)}
+.pname{font-family:var(--display);font-size:20px;font-weight:800;color:#fff;line-height:1.2}
+.pfor{font-size:14px;color:#C8C3E6;margin-top:4px}
+.pprice{display:flex;align-items:baseline;gap:10px;margin:14px 0 2px;flex-wrap:wrap}
+.pprice b{font-family:var(--display);font-size:46px;font-weight:800;color:#fff;line-height:1}
+.pprice s{font-family:var(--display);font-size:22px;color:#ABA5D0;text-decoration-thickness:2px}
+.pprice small{font-size:13px;font-weight:700;color:#FDE68A}
+.psave{display:inline-block;align-self:flex-start;background:#22C55E;color:#fff;border-radius:99px;padding:3px 11px;font-size:12.5px;font-weight:800;margin-top:6px}
+.psave[hidden],[data-was][hidden]{display:none}
+.plan ul{list-style:none;padding:0;margin:16px 0 20px;display:grid;gap:9px;flex:1}
+.plan li{position:relative;padding-left:28px;font-size:14.5px;color:#E4E0F7;line-height:1.45}
+.plan li b{color:#fff}
+.plan li:before{position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800}
+.plan li.y:before{content:"✓";background:var(--green);color:#fff}
+.plan li.n{color:#8D88AE;text-decoration:line-through}
+.plan li.n:before{content:"✕";background:rgba(255,255,255,.12);color:#ABA5D0}
+.plan .btn.ghost{color:#fff}
+.psample{display:block;text-align:center;margin-top:12px;font-size:13.5px;color:#FDE68A}
+@media (max-width:760px){
+  .plans{grid-template-columns:1fr;gap:26px}
+  .plan.pro{order:-1}
+  .pprice b{font-size:40px}
+}
