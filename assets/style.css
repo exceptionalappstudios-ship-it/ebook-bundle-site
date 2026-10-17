@@ -484,3 +484,5 @@ footer p a{color:#F9A8D4}
 /* Hero price line: centred under the full-width button on phones; clean strike */
 .hero-sub s{text-decoration-thickness:1.5px;text-decoration-skip-ink:none}
 @media (max-width:760px){.hero2 .cta-row + .hero-sub{text-align:center}}
+/* 4 pain cards: 2x2 on tablet/desktop */
+@media (min-width:761px){.cards.pains{grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto}}
