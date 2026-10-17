@@ -488,3 +488,9 @@ footer p a{color:#F9A8D4}
 @media (min-width:761px){.cards.pains{grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto}}
 .hero-sub .rv{color:#FDE68A;font-weight:800}
 .hero-sub .alt{font-size:13px;opacity:.85}
+/* Mobile hero: centred, single-column composition */
+@media (max-width:760px){
+  .hero2 .wrap > div:first-child{text-align:center}
+  .hero2 .lede{margin-left:auto;margin-right:auto;max-width:22em}
+  .hero2 .chips{justify-content:center}
+}
