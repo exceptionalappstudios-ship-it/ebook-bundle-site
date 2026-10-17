@@ -433,3 +433,41 @@ footer p a{color:#F9A8D4}
 .dlbox .btn{margin:0}
 .upnote{margin:18px 0;padding:14px 16px;border-radius:14px;background:#FFF7D6;border:1px solid #FDE68A;font-size:14.5px;color:#4A3B00}
 .page ol li{margin:4px 0}
+
+/* ===== v2 conversion redesign ===== */
+.hero2{padding:52px 0 70px}
+.hero2 h1{font-size:clamp(38px,6.4vw,70px);line-height:1.04;margin:16px 0 16px}
+.hero2 .lede{font-size:clamp(17px,2vw,20px);max-width:30em;color:#E4E0F7}
+.hero2 .cta-row{margin-top:26px}
+.btn.big{padding:19px 34px;font-size:18px}
+.hero-sub{margin:12px 0 0;font-size:14.5px;color:#C8C3E6}
+.hero-sub s{color:#F9A8D4}
+.hero-sub a{color:#FDE68A}
+.hero2 .chips{margin-top:18px}
+.hero2 .paybadges{margin-top:16px}
+.marquee.slim{padding:0 0 34px}
+.marquee.slim .row{animation-duration:45s}
+.marquee.slim img{width:92px}
+.pains .rcard:after{display:none}
+.pains .rcard h3{font-size:19px}
+.bridge{margin:26px auto 0;max-width:780px;text-align:center;font-size:18px;line-height:1.6;color:var(--ink2);background:#fff;border-radius:20px;padding:22px 24px;box-shadow:var(--shadow);border-top:4px solid var(--violet)}
+.bridge b{color:var(--violet)}
+.steps3{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:none}
+.steps3 li{background:#fff;border-radius:var(--r);padding:26px 22px;box-shadow:var(--shadow);position:relative}
+.steps3 li > span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--grad);color:#fff;font-family:var(--display);font-weight:800;font-size:20px;margin-bottom:14px}
+.steps3 b{display:block;font-family:var(--display);font-size:20px;margin-bottom:6px}
+.steps3 p{margin:0;color:var(--mut);font-size:15px}
+.trustline{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 0}
+.trustline span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--ink2)}
+.center-cta{text-align:center;margin-top:26px}
+@media (min-width:761px){.plans{grid-template-columns:1.15fr 1fr}}
+.pprice .oldp{color:#ABA5D0;font-weight:600}.pprice .oldp s{color:#ABA5D0}
+.guar{max-width:620px;margin:20px auto 0;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.45);border-radius:14px;padding:12px 16px;font-size:14.5px;color:#D1FAE5;text-align:left}
+.guar b{color:#6EE7B7;margin-right:6px}
+@media (max-width:760px){
+  .hero2{padding:34px 0 56px}
+  .hero2 .fan{height:280px}
+  .steps3{grid-template-columns:1fr}
+  .bridge{font-size:16px;padding:18px}
+  .btn.big{padding:17px 22px;font-size:17px;width:100%}
+}
