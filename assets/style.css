@@ -481,3 +481,6 @@ footer p a{color:#F9A8D4}
 .hero2 .chips li{white-space:nowrap}
 @media (max-width:760px){.reveal{padding-left:18px;padding-right:18px}}
 .reveal:before,.reveal:after{display:none}
+/* Hero price line: centred under the full-width button on phones; clean strike */
+.hero-sub s{text-decoration-thickness:1.5px;text-decoration-skip-ink:none}
+@media (max-width:760px){.hero2 .cta-row + .hero-sub{text-align:center}}
