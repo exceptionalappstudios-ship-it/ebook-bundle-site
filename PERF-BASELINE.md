@@ -68,3 +68,16 @@ new files from one local Brotli server so the comparison is like-for-like. The M
 ## How to judge it in Meta
 
 A week after going live, compare **landing page views ÷ link clicks** in Ads Manager (74% now, target 85%+).
+
+## Update: verified live and merged with the conversion pass
+
+**Live seekhoshop.com after upload** (Lighthouse mobile, median of 3):
+score 91 → **93**, LCP 2.19 s → **1.71 s**, total page weight 718 → **560 KB**, requests 31 → **19** (13 our own, 283 KB).
+
+**Combined with the `landing-conversion-boost` content** (same local server, median of 3):
+score **94**, LCP **1.99 s**, FCP **1.00 s**, CLS **0**, our own requests **13** / **280 KB**, no render-blocking resources.
+
+Notes:
+- Shimmer button effect animates `transform` only; the infinite `box-shadow` pulse was replaced by a static glow.
+- Hostinger's CDN still sends `Cache-Control: max-age=604800` for images (our `.htaccess` value is overridden);
+  this only affects repeat visits.
