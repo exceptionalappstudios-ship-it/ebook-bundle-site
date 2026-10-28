@@ -28,7 +28,7 @@ fbq('track', 'ViewContent', {content_ids: ['seekho-ebooks-60', 'seekho-complete-
 <span class="pill"><i>FOR 9–5ERS</i> students &amp; homemakers too</span>
 <h1>Keep your 9–5.<br>Start a side hustle <span class="grad-text">tonight.</span></h1>
 <p class="lede">60 ready ebooks + who to sell them to.<br>Post from your phone. Get paid on UPI.</p>
-<div class="cta-row hero-ctas"><a class="btn buy-btn big shine" href="#buy">Get all 60 ebooks · <span data-price="complete">₹399</span></a><a class="btn buy-btn lite" href="#buy">Just the ebooks · <span data-price="ebooks">₹299</span></a></div>
+<div class="cta-row hero-ctas"><a class="btn buy-btn big shine" href="#buy">Get all 60 ebooks · <span data-price="complete">₹399</span></a><a class="btn lite" href="#categories" data-browse>👀 See all 60 ebooks</a></div>
 <p class="hero-sub"><b class="rv">₹8,220</b> resale value · pay once, keep forever</p>
 <ul class="chips"><li>Instant download</li><li>Resell rights: keep 100%</li><li>No stock, no website</li></ul>
 
@@ -123,6 +123,7 @@ function refresh(){
   document.querySelectorAll('[data-diff]').forEach(function(x){x.textContent='₹'+df});
 }
 // Meta Pixel events
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-browse]');if(a&&window.fbq)fbq('trackCustom','BrowseEbooks',{content_name:'Hero: see all 60 ebooks'});});
 document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[data-plan]'); if(!a||!window.fbq) return;
   var P=PLANS[a.dataset.plan];
