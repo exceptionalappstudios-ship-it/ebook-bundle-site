@@ -153,6 +153,10 @@ function calc(){
   var be=Math.ceil((ads+399)/(mrp*0.98)); document.getElementById('be').textContent = 'Break-even: about '+be+' sales to cover ads and the bundle'+(sales<be?' (this setup falls short)':'');
 }
 ['mrp','ads','cpa'].forEach(function(i){document.getElementById(i).addEventListener('input',calc)}); calc(); refresh();
+// Retargeting ads link to ?offer=15: open with SEEKHO15 already on, still showing both plans
+if(/[?&]offer=15(&|$)/.test(location.search)&&ub){D=true;document.getElementById('codebox').style.display='block';ub.style.display='none';refresh();
+  if(window.fbq)fbq('trackCustom','OfferLink',{content_name:'Retargeting 15% link'});
+  window.addEventListener('load',function(){document.getElementById('buy').scrollIntoView({behavior:'smooth'})});}
 if(LAUNCH_END){var end=new Date(LAUNCH_END);setInterval(function(){var s=Math.max(0,(end-new Date())/1000|0);var d=s/86400|0,h=(s%86400)/3600|0,m=(s%3600)/60|0;var c=document.getElementById('cd');if(c)c.textContent=d+'d '+h+'h '+m+'m'},1000)}
 </script>
 <script>
